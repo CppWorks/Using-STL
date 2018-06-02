@@ -6,6 +6,7 @@
 #include <iostream>  // For standard streams
 #include <iterator>  // For stream iterators and begin() and end()
 #include <string>
+
 using std::string;
 
 int main()

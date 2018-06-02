@@ -7,6 +7,7 @@
 #include <stack>     // For stack<T> container
 #include <stdexcept> // For runtime_error exception
 #include <string>    // For string class
+
 using std::string;
 
 // Returns value for operator precedence

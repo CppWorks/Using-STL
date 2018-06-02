@@ -6,6 +6,7 @@
 #include <iomanip>   // For  stream manipulators
 #include <iostream>  // For standard streams
 #include <string>    // For string class
+
 using std::string;
 
 // List a deque of words

@@ -6,6 +6,7 @@
 #include <iterator>  // For iterators and begin() and end()
 #include <string>
 #include <vector> // For vector container
+
 using std::string;
 
 int main()

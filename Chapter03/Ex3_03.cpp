@@ -4,6 +4,7 @@
 #include <iostream> // For standard streams
 #include <queue>    // For priority_queue<T>
 #include <string>   // For string class
+
 using std::string;
 
 // List contents of a priority queue

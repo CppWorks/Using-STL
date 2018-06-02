@@ -3,6 +3,7 @@
 
 #ifndef STUDENT_H
 #define STUDENT_H
+
 #include <ostream> // For output streams
 #include <string>  // For string class
 

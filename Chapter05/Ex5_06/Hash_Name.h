@@ -3,6 +3,7 @@
 
 #ifndef HASH_NAME_H
 #define HASH_NAME_H
+
 #include "Name.h"
 
 class Hash_Name {

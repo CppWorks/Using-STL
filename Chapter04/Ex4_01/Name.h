@@ -3,6 +3,7 @@
 
 #ifndef NAME_H
 #define NAME_H
+
 #include <istream> // For input streams
 #include <ostream> // For output streams
 #include <string>  // For string class

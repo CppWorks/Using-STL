@@ -6,6 +6,7 @@
 #include <iterator>  // For stream iterators
 #include <string>    // For string class
 #include <vector>    // For vector container
+
 using std::string;
 
 int main()

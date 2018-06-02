@@ -5,6 +5,7 @@
 #include <iostream> // For standard streams
 #include <iterator> // For iterators and begin() and end()
 #include <string>   // For string class
+
 using std::string;
 
 int main()

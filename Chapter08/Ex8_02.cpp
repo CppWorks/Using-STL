@@ -5,6 +5,7 @@
 #include <iterator> // For iterators
 #include <random>   // For seed_seq, random_device
 #include <string>   // For string class
+
 using std::string;
 
 // Generates and list integers from a seed_seq object

@@ -6,6 +6,7 @@
 #include <iostream>            // For standard streams
 #include <numeric>             // For iota()
 #include <valarray>            // For valarray
+
 const static double g{ 32.0 }; // Acceleration due to gravity ft/sec/sec
 
 int main()

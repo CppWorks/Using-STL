@@ -9,6 +9,7 @@
 #include <utility>   // For swap()
 #include <valarray>  // For valarray, slice, abs()
 #include <vector>    // For vector container
+
 using std::slice;
 using std::string;
 using std::valarray;

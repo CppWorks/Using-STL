@@ -10,6 +10,7 @@
 #include <random>   // For distributions and random number generators
 #include <string>
 #include <vector> // For vector container
+
 using std::string;
 using Params = std::normal_distribution<>::param_type;
 

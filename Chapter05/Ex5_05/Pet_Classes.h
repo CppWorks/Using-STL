@@ -3,8 +3,10 @@
 
 #ifndef PET_CLASSES_H
 #define PET_CLASSES_H
+
 #include <cstring> // For strcmp()
 #include <string>  // For string class
+
 using std::string;
 
 class Pet {

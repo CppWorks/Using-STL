@@ -8,6 +8,7 @@
 #include <numeric>  // For accumulate(), inner_product()
 #include <string>   // For string class
 #include <vector>   // For vector container
+
 using std::string;
 
 int main()

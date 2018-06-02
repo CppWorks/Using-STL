@@ -5,6 +5,7 @@
 #include "Customer.h"
 #include <memory> // For smart pointers
 #include <queue>  // For queue container
+
 using PCustomer = std::unique_ptr<Customer>;
 
 class Checkout {

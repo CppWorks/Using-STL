@@ -2,6 +2,7 @@
 #define ACCCOUNT_H
 
 #include "Transaction.h"
+
 #include <iomanip>  // For stream manipulators
 #include <iostream> // For stream class
 #include <string>   // For string class

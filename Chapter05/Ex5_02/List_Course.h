@@ -3,7 +3,9 @@
 
 #ifndef LIST_COURSE_H
 #define LIST_COURSE_H
+
 #include "Student.h"
+
 #include <algorithm> // For copy()
 #include <iostream>  // For standard streams
 #include <iterator>  // For ostream_iterator

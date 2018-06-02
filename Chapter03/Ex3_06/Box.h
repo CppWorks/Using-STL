@@ -3,9 +3,10 @@
 
 #ifndef BOX_H
 #define BOX_H
-#include <iostream>           // For standard streams
-#include <istream>            // For stream classes
-#include <utility>            // For comparison operator templates
+#include <iostream> // For standard streams
+#include <istream>  // For stream classes
+#include <utility>  // For comparison operator templates
+
 using namespace std::rel_ops; // Comparison operator template namespace
 
 class Box {

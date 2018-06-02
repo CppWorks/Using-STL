@@ -5,6 +5,7 @@
 #include <iomanip>  // For stream manipulators
 #include <iostream> // For standard streams
 #include <ratio>    // For ratio templates
+
 using namespace std::chrono;
 
 // Outputs the exact interval in seconds for a time_point<>

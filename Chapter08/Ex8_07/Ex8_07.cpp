@@ -2,6 +2,7 @@
 // Implementing a dice throwing game using discrete distributions
 
 #include "Die.h"     // Class to define a die
+
 #include <algorithm> // For count(), remove()
 #include <array>     // For array container
 #include <iomanip>   // For stream manipulators

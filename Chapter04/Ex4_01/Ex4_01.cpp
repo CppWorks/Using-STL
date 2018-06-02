@@ -8,6 +8,7 @@
 #include <map>      // For map container class
 #include <string>   // For string class
 #include <utility>  // For pair<> & make_pair<>()
+
 using std::string;
 using Entry = std::pair<const Name, size_t>;
 using std::make_pair;
