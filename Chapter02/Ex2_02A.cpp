@@ -3,6 +3,7 @@
 
 #include <algorithm> // For swap() and copy() functions
 #include <iostream>  // For standard streams
+#include <iterator>
 #include <string>    // For string types
 #include <vector>    // For vector (and iterators)
 

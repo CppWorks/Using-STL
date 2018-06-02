@@ -3,6 +3,7 @@
 
 #ifndef BOX_H
 #define BOX_H
+
 #include <iostream> // For standard streams
 #include <utility>  // For comparison operator templates
 
@@ -21,15 +22,18 @@ public:
     , height{ h }
   {
   }
+
   double volume() const
   {
     return length * width * height;
   }
-  bool operator<(const Box& box)
+
+  bool operator<(const Box& box) const
   {
     return volume() < box.volume();
   }
-  bool operator==(const Box& box)
+
+  bool operator==(const Box& box) const
   {
     return length == box.length && width == box.width && height == box.height;
   }

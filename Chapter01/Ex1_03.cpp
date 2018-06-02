@@ -2,6 +2,7 @@
 // Passing functions to an algorithm
 
 #include <algorithm>  // For transform()
+#include <cmath>
 #include <functional> // For function
 #include <iostream>   // For standard streams
 #include <iterator>   // For iterators

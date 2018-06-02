@@ -2,6 +2,7 @@
 // Working with a forward list
 
 #include "Box.h"
+
 #include <algorithm>    // For copy()
 #include <forward_list> // For forward_list container
 #include <iostream>     // For standard streams
