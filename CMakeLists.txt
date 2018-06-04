@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 3.0)
 
 project(Using-STL VERSION 0.0.1)
 
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # Chapter 1: Introducing the Standard Template Library
+add_executable(Misc1 ${CMAKE_SOURCE_DIR}/Chapter01/misc.cpp)
 add_executable(Ex1_01 ${CMAKE_SOURCE_DIR}/Chapter01/Ex1_01.cpp)
 add_executable(Ex1_02 ${CMAKE_SOURCE_DIR}/Chapter01/Ex1_02.cpp)
 add_executable(Ex1_03 ${CMAKE_SOURCE_DIR}/Chapter01/Ex1_03.cpp)
