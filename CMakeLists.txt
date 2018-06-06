@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 project(Using-STL VERSION 0.0.1)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -13,6 +13,7 @@ add_executable(Ex1_02 ${CMAKE_SOURCE_DIR}/Chapter01/Ex1_02.cpp)
 add_executable(Ex1_03 ${CMAKE_SOURCE_DIR}/Chapter01/Ex1_03.cpp)
 
 # Chapter 2: Using Sequence Containers
+add_executable(Misc2 ${CMAKE_SOURCE_DIR}/Chapter02/misc.cpp)
 add_executable(Ex2_01 ${CMAKE_SOURCE_DIR}/Chapter02/Ex2_01.cpp)
 add_executable(Ex2_02A ${CMAKE_SOURCE_DIR}/Chapter02/Ex2_02A.cpp)
 add_executable(Ex2_02 ${CMAKE_SOURCE_DIR}/Chapter02/Ex2_02.cpp)

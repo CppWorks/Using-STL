@@ -23,7 +23,9 @@ int main()
 
   // Read the proverbs
   std::cout << "Enter a few proverbs and enter an empty line to end:" << std::endl;
+
   string proverb;
+
   while (getline(std::cin, proverb, '\n'), !proverb.empty())
     proverbs.push_front(proverb);
 

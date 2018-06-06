@@ -1,8 +1,8 @@
 // Ex2_03.cpp
 // Understanding how capacity is increased in a vector container
 
-#include <iostream> // For standard streams
-#include <vector>   // For vector container
+#include <iostream>
+#include <vector>
 
 int main()
 {

@@ -44,7 +44,7 @@ public:
 
 inline std::istream& operator>>(std::istream& in, Box& box)
 {
-  std::cout << "Enter box length, width, & height separated by spaces - Ctrl+Z to end: ";
+  std::cout << "Enter box length, width, & height separated by spaces - Ctrl+D on a separate line to end: ";
   size_t value;
   in >> value;
   if (in.eof())

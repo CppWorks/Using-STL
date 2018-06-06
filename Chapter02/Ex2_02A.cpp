@@ -4,8 +4,8 @@
 #include <algorithm> // For swap() and copy() functions
 #include <iostream>  // For standard streams
 #include <iterator>
-#include <string>    // For string types
-#include <vector>    // For vector (and iterators)
+#include <string> // For string types
+#include <vector> // For vector (and iterators)
 
 using std::string;
 using std::vector;
@@ -33,7 +33,7 @@ int main()
 {
   vector<string> words; // Stores words to be sorted
   words.reserve(10);    // Allocate some space for elements
-  std::cout << "Enter words separated by spaces. Enter Ctrl+Z on a separate line to end:"
+  std::cout << "Enter words separated by spaces. Enter Ctrl+D on a separate line to end:"
             << std::endl;
   std::copy(std::istream_iterator<string>{ std::cin }, std::istream_iterator<string>{},
             std::back_inserter(words));

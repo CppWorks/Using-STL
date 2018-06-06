@@ -11,6 +11,7 @@ weight is in kilograms, height is in meters
 
 int main()
 {
+  // http://en.cppreference.com/w/cpp/language/integer_literal
   const unsigned int min_wt{ 100U }; // Minimum weight in table in lbs
   const unsigned int max_wt{ 250U }; // Maximum weight in table in lbs
   const unsigned int wt_step{ 10U }; // Weight increment

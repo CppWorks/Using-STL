@@ -1,18 +1,18 @@
 // Ex2_07.cpp
 // Exercising the Numeric_Range template
 
-#include "Numeric_Range.h" // For Numeric_Range<T> & Numeric_Iterator<T>
-#include <algorithm>       // For copy()
-#include <iostream>        // For standard streams
-#include <numeric>         // For accumulate()
-#include <vector>          // For vector container
+#include "Numeric_Range.h"
+#include <algorithm>
+#include <iostream>
+#include <numeric>
+#include <vector>
 
 int main()
 {
   Numeric_Range<double> range{ 1.5, 0.5, 5 };
   auto first = range.begin();
   auto last = range.end();
-  std::copy(first, last, std::ostream_iterator<double>(std::cout, "  "));
+  std::copy(first, last, std::ostream_iterator<double>(std::cout, " "));
   std::cout << "\nSum = " << std::accumulate(std::begin(range), std::end(range), 0.0)
             << std::endl;
 
@@ -21,7 +21,7 @@ int main()
   std::vector<long> data{ std::begin(numbers), std::end(numbers) };
   std::cout << "\nValues in vector are:\n";
   std::copy(std::begin(data), std::end(data),
-            std::ostream_iterator<long>(std::cout, "  "));
+            std::ostream_iterator<long>(std::cout, " "));
   std::cout << std::endl;
 
   // List the values in a range
