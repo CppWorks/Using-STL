@@ -33,8 +33,9 @@ add_executable(Ex3_05 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_05/Ex3_05.cpp)
 add_executable(Ex3_06 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_06/Ex3_06.cpp ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_06/Box.cpp)
 
 # Chapter 4: Map Containers
+add_executable(Misc4 ${CMAKE_SOURCE_DIR}/Chapter04/misc.cpp)
 add_executable(Ex4_01 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_01/Ex4_01.cpp)
-# add_executable(Ex4_02 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_02.cpp)
+add_executable(Ex4_02 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_02.cpp)
 add_executable(Ex4_03 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_03/Ex4_03.cpp)
 add_executable(Ex4_04 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_04.cpp)
 add_executable(Ex4_05 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_05.cpp)

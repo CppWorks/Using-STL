@@ -10,13 +10,13 @@
 
 class Name {
 private:
-  std::string first{};
-  std::string second{};
+  std::string firstName{};
+  std::string secondName{};
 
 public:
   Name(const std::string& name1, const std::string& name2)
-    : first(name1)
-    , second(name2)
+    : firstName(name1)
+    , secondName(name2)
   {
   }
   Name() = default;
@@ -24,7 +24,7 @@ public:
   // Less-than operator
   bool operator<(const Name& name) const
   {
-    return second < name.second || (second == name.second && first < name.first);
+    return secondName < name.secondName || (secondName == name.secondName && firstName < name.firstName);
   }
 
   friend std::istream& operator>>(std::istream& in, Name& name);
@@ -34,14 +34,14 @@ public:
 // Extraction operator overload
 inline std::istream& operator>>(std::istream& in, Name& name)
 {
-  in >> name.first >> name.second;
+  in >> name.firstName >> name.secondName;
   return in;
 }
 
 // Insertion operator overload
 inline std::ostream& operator<<(std::ostream& out, const Name& name)
 {
-  out << name.first + " " + name.second;
+  out << name.firstName + " " + name.secondName;
   return out;
 }
 

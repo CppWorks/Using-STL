@@ -2,8 +2,9 @@
 #define QUOTATIONS_H
 
 #include <exception> // For out_of_range exception
-#include <string>    // For string class
-#include <vector>    // For vector container
+#include <stdexcept>
+#include <string> // For string class
+#include <vector> // For vector container
 
 class Quotations {
 private:
@@ -27,6 +28,10 @@ public:
   // Moves a quotation into the vector
   Quotations& operator<<(std::string&& quote)
   {
+    // When you access an rvalue reference parameter in the body of a function by name, it
+    // will be an lvalue, so you must use move() to pass the argument on to the
+    // push_back() member of the vector as an rvalue. This will enable the object to be
+    // moved all the way, with no copying.
     quotes.push_back(std::move(quote));
     return *this;
   }

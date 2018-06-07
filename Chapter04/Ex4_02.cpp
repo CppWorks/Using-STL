@@ -5,9 +5,10 @@
 #include <cctype>    // For isalpha()
 #include <iomanip>   // For stream manipulators
 #include <iostream>  // For standard streams
-#include <map>       // For map container
-#include <sstream>   // For istringstream
-#include <string>    // For string class
+#include <iterator>
+#include <map>     // For map container
+#include <sstream> // For istringstream
+#include <string>  // For string class
 
 using std::string;
 
@@ -42,5 +43,5 @@ int main()
     if (++count % per_line == 0)
       std::cout << std::endl;
   }
-  std::cout << std::endl;
+  std::cout << std::endl << "Number of words: " << words.size() << std::endl;
 }
