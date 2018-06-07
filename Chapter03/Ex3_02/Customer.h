@@ -3,6 +3,8 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+#include <cstddef>
+
 class Customer {
 protected:
   size_t service_t{}; // Time to checkout

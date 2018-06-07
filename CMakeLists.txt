@@ -24,11 +24,12 @@ add_executable(Ex2_06 ${CMAKE_SOURCE_DIR}/Chapter02/Ex2_06/Ex2_06.cpp)
 add_executable(Ex2_07 ${CMAKE_SOURCE_DIR}/Chapter02/Ex2_07/Ex2_07.cpp)
 
 # Chapter 3: Container Adapters
+add_executable(Misc3 ${CMAKE_SOURCE_DIR}/Chapter03/misc.cpp)
 add_executable(Ex3_01 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_01.cpp)
-# add_executable(Ex3_02 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_02/Ex3_02.cpp)
+add_executable(Ex3_02 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_02/Ex3_02.cpp)
 add_executable(Ex3_03 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_03.cpp)
 add_executable(Ex3_04 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_04.cpp)
-# add_executable(Ex3_05 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_05/Ex3_05.cpp)
+add_executable(Ex3_05 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_05/Ex3_05.cpp)
 add_executable(Ex3_06 ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_06/Ex3_06.cpp ${CMAKE_SOURCE_DIR}/Chapter03/Ex3_06/Box.cpp)
 
 # Chapter 4: Map Containers

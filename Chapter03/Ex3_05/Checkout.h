@@ -2,6 +2,7 @@
 
 #ifndef CHECKOUT_H
 #define CHECKOUT_H
+
 #include "Customer.h"
 #include <memory> // For smart pointers
 #include <queue>  // For queue container

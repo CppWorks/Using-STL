@@ -7,7 +7,8 @@
 
 using std::string;
 
-// List contents of a priority queue
+// List contents of a priority queue. The arguments are passed by value so this processes
+// a copy of the priority queue.
 template <typename T>
 void list_pq(std::priority_queue<T> pq, size_t count = 5)
 {
@@ -28,7 +29,7 @@ int main()
   std::priority_queue<std::string> words;
   std::string word;
   std::cout
-    << "Enter words separated by spaces, enter Ctrl+Z on a separate line to end:\n";
+    << "Enter words separated by spaces, enter Ctrl+D on a separate line to end:\n";
   while (true) {
     if ((std::cin >> word).eof())
       break;
