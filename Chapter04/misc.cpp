@@ -714,5 +714,172 @@ int main() {
       std::cout << item.first.getFirstName() << " " << item.first.getSecondName() << " " << item.second << std::endl;
     }
   }
+
+  {
+    // Adjusting the Bucket Count
+
+    std::unordered_map<std::string, size_t> people{ { "Jan", 44 },
+                                                    { "Jim", 33 },
+                                                    { "Joe", 99 } };
+
+    // You can change the number of buckets at any time by calling the rehash() function
+    // member: Make bucket count 15 as long as is does not result in the maximum load
+    // factor being exceeded. If the maximum load factor would be exceeded with the bucket
+    // count specified, the bucket count will be increased so the maximum will not be exceeded.
+    people.rehash(15);
+
+    // If you want to be sure that you will increase the bucket count, you can use the
+    // value that bucket_count() returns. Increase bucket count by 25%:
+    people.rehash((5 * people.bucket_count()) / 4);
+
+    // Another possibility is to increase the maximum load factor:
+    people.max_load_factor(1.2 * people.max_load_factor());
+
+    // current load factor by calling:
+    float lf = people.load_factor();
+
+    // accommodate a given number of elements while maintaining the load factor:
+    size_t max_element_count {100};
+    people.reserve(max_element_count);
+
+    //  Of course, you can create and use unordered_map containers without worrying about
+    //  bucket counts or load factors. It will all be taken care of by the container. It’s
+    //  worth thinking about for real-world application where performance is important and
+    //  the container is a significant factor in that.
+
+    // The fastest access will be obtained when there is no more than one element per
+    // bucket, but this is not realistic in practice because it would require a lot of
+    // memory because inevitably there would be a lot of empty buckets. Increasing the
+    // maximum load factor allows more elements per bucket and therefore fewer buckets in
+    // total, so this is more efficient on memory usage. However, more elements per bucket
+    // will result in slower access to elements so performance will be poorer.
+
+    // Perhaps the most important thing you can do is avoid rehashing the contents
+    // repeatedly.
+
+    {
+      // Inserting Elements
+
+      // same as map, e.g.
+      std::unordered_map<std::string, size_t> people{ { "Jim", 33 }, { "Joe", 99 } };
+      std::cout << std::string(50, '-') << std::endl;
+      std::cout << "people container has " << people.bucket_count() << " buckets.\n";
+      // move insert: returns a pair object where the first member is an iterator that
+      // points either to the new element, or if it was not inserted, the element that
+      // prevented its insertion.
+      auto pr = people.insert(std::pair<std::string, size_t>{ "Jan", 44 });
+      std::cout << "Element " << (pr.second ? "was" : "was not") << " inserted."
+                << std::endl;
+
+      std::pair<std::string, size_t> Jim{ "Jim", 47 };
+      pr = people.insert(Jim);
+      std::cout << "\nElement " << (pr.second ? "was" : "was not") << " inserted."
+                << std::endl;
+      std::cout << pr.first->first << " is " << pr.first->second << std::endl;
+
+      // insert an element with a hint as to where it should go:
+      auto count = people.size();
+      std::pair<std::string, size_t> person{ "Joan", 33 };
+      auto iter = people.insert(pr.first, person);
+      std::cout << "\nElement " << (people.size() > count ? "was" : "was not")
+                << " inserted." << std::endl;
+
+      // insert the contents of an initializer list - no return value:
+      people.insert({{"Bill", 21}, {"Ben", 22}});
+
+      // using existing container - no return value either:
+      std::unordered_map<std::string, size_t> folks;
+      folks.insert(std::begin(people), std::end(people));
+
+      // create elements in place with emplace() or emplace_hint():
+      pr = people.emplace("Sue", 64); // returns pair<iterator, bool>
+      iter = people.emplace_hint(pr.first, "Sid", 67); // Returns iterator
+      people.emplace_hint(iter, std::make_pair("Sam", 59));
+
+      // assignment
+      folks = people; // Replace folks elements by people elements
+
+      // Accessing Elements
+      // Using a key that does not exist with the subscript operator for an element will
+      // cause an element with that key to be created with a default value for the
+      // associated object.
+      people["Jim"] = 22;
+      people["May"] = people["Jim"];
+      ++people["Joe"];
+      people["Kit"] = people["Joe"];
+
+      // The at() member returns a reference to the object associated with the argument
+      // that is a key but throws an out_of_range exception if the key is not present.
+      // Thus you use at() rather than the subscript operator when you don’t want elements
+      // to be created with a default object. You also have find() and equal_range()
+      // members that work in the same way as I described for a map.
+
+      // range-based for loop:
+      std::cout << std::string(50, '-') << std::endl;
+      for (const auto& person : people)
+        std::cout << person.first << " is " << person.second << std::endl;
+
+      // Removing Elements
+
+      // use eraase() with key or iterator:
+      auto n = people.erase("Jim");   // Returns 0 if key not found
+      iter = people.find("May"); // Returns end iterator if key not found
+      if (iter != people.end())
+        iter = people.erase(iter); // Returns iterator for element after "May"
+
+      // Remove all except 1st and last
+      // Compile Error!!!
+      // iter = people.erase(++std::begin(people), --std::end(people));
+
+      // Accessing Buckets
+
+      // Returns an iterator for the 2nd bucket:
+      auto iter1 = people.begin(1);
+
+      // You can output the elements in a particular bucket – a bucket list :-)
+      size_t index{0};
+      std::cout << std::string(50, '-') << "\nThe elements in bucket[" << index << "] are:\n";
+      for(auto iter = people.begin(index); iter != people.end(index); ++iter)
+        std::cout << iter->first << " is " << iter->second << std::endl;
+
+      std::string key{ "Joe" };
+      if (people.find(key) != std::end(people))
+        std::cout << "The number of elements in the bucket containing " << key << " is "
+                  << people.bucket_size(people.bucket(key)) << std::endl;
+    }
+  }
+
+  {
+    // Using an unordered_multimap Container
+
+    // An unordered_multimap container is an unordered map that allows duplicate keys.
+    // Thus, the operations it supports are essentially the same as for an unordered_map
+    // container except for the changes and additions necessary to deal with multiple keys
+    // that are identical.
+
+    std::unordered_multimap<std::string, size_t> people {{"Jim", 33}, {"Joe", 99}};
+
+    // returns an iterator that points to the new elements
+    auto iter = people.emplace("Jan", 45);
+    people.insert({"Jan", 44});
+    people.emplace_hint(iter, "Jan", 46);
+
+    // The at() and operator[]() members that an unordered_map supports are not available
+    // for an unordered_multimap because of the potential for duplicate keys. The only
+    // options you have for accessing elements are the find() and equal_range() members.
+    std::string key{ "Jan" };
+    auto n = people.count(key); // Number of elements stored with key
+    if (n == 1)
+      std::cout << key << " is " << people.find(key)->second << std::endl;
+    else if (n > 1) {
+      auto pr = people.equal_range(key); // pair of begin & end iterators returned
+      while (pr.first != pr.second) {
+        std::cout << key << " is " << pr.first->second << std::endl;
+        ++pr.first; // Increment begin iterator
+      }
+    }
+
+
+  }
   return 0;
 }

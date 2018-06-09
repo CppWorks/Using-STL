@@ -1,5 +1,7 @@
 // Templates for Ex4_07
 
+#include <iostream>
+
 // List all elements
 template <typename Container>
 void list_elements(const Container& container)
@@ -20,7 +22,6 @@ void list_range(const T& pr)
 }
 
 // Find elements for a key entered from the keyboard - C++ 14 version
-/*
 template<typename Container>
 auto find_elements(const Container& container)
 {
@@ -29,15 +30,14 @@ auto find_elements(const Container& container)
   auto pr = container.equal_range(key);
   return pr;
 }
-*/
 
 // Find elements for a key entered from the keyboard - C++ 11 version
-template <typename Container>
-auto find_elements(const Container& container)
-  -> std::pair<typename Container::const_iterator, typename Container::const_iterator>
-{
-  typename Container::key_type key{};
-  std::cin >> key;
-  auto pr = container.equal_range(key);
-  return pr;
-}
+// template <typename Container>
+// auto find_elements(const Container& container)
+//   -> std::pair<typename Container::const_iterator, typename Container::const_iterator>
+// {
+//   typename Container::key_type key{};
+//   std::cin >> key;
+//   auto pr = container.equal_range(key);
+//   return pr;
+// }
