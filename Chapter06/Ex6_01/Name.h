@@ -1,6 +1,7 @@
 #ifndef NAME_H
 #define NAME_H
 
+#include <iostream>
 #include <string> // For string class
 
 class Name {

@@ -52,7 +52,7 @@ add_executable(Ex5_06 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_06/Ex5_06.cpp)
 add_executable(Ex5_07 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_07/Ex5_07.cpp)
 
 # Chapter 6: Sorting, Merging, Searching, and Partitioning
-# add_executable(Ex6_01 ${CMAKE_SOURCE_DIR}/Chapter06/Ex6_01/Ex6_01.cpp)
+add_executable(Ex6_01 ${CMAKE_SOURCE_DIR}/Chapter06/Ex6_01/Ex6_01.cpp)
 add_executable(Ex6_02 ${CMAKE_SOURCE_DIR}/Chapter06/Ex6_02/Ex6_02.cpp)
 add_executable(Ex6_03 ${CMAKE_SOURCE_DIR}/Chapter06/Ex6_03.cpp)
 add_executable(Ex6_04 ${CMAKE_SOURCE_DIR}/Chapter06/Ex6_04.cpp)
