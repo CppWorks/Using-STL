@@ -33,7 +33,7 @@ int main()
 
   // Output all the pets
   std::cout << "\nPet list by type:\n";
-  auto iter = std::begin(pets);
+  auto iter = std::begin(pets); // get all the keys!
   while (iter != std::end(pets)) {
     auto pr = pets.equal_range(iter->first);
     std::cout << "\nPets of type " << iter->first << " are:\n";

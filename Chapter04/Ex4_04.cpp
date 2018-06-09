@@ -100,7 +100,7 @@ void list_sorted_people(const People& people, Compare comp)
 
 int main()
 {
-  std::map<Name, Details> people; // Records of the people
+  People people; // Records of the people
   get_people(people);             // Read all the people
 
   std::cout << "\nThe DOB & jobs are: \n";
