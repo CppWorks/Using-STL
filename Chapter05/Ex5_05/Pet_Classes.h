@@ -5,7 +5,8 @@
 #define PET_CLASSES_H
 
 #include <cstring> // For strcmp()
-#include <string>  // For string class
+#include <iostream>
+#include <string> // For string class
 
 using std::string;
 

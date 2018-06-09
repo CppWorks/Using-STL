@@ -40,7 +40,7 @@ Students create_students()
 
 // Create a group of students for a subject
 Group make_group(const Students& students, size_t group_size,
-                 const Distribution& choose_student)
+                 Distribution& choose_student)
 {
   Group group; // The group of students for a subject
 

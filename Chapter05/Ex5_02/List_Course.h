@@ -9,8 +9,9 @@
 #include <algorithm> // For copy()
 #include <iostream>  // For standard streams
 #include <iterator>  // For ostream_iterator
-#include <set>       // For set container
-#include <string>    // For string class
+#include <memory>
+#include <set>    // For set container
+#include <string> // For string class
 
 using Subject = std::string; // A course subject
 using Group

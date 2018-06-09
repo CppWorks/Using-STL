@@ -2,13 +2,14 @@
 // Using an unordered_multiset container
 
 #include "Hash_Name.h"
-#include "Name.h"
 
-#include <algorithm>     // For copy(), max(), find_if(), for_each()
-#include <iomanip>       // For stream manipulators
-#include <iostream>      // For standard streams
+#include <algorithm> // For copy(), max(), find_if(), for_each()
+#include <iomanip>   // For stream manipulators
+#include <iostream>  // For standard streams
+#include <iterator>
 #include <string>        // For string class
 #include <unordered_set> // For unordered_multiset containers
+#include <vector>
 
 using std::string;
 using Names = std::unordered_multiset<Name, Hash_Name>;

@@ -43,13 +43,13 @@ add_executable(Ex4_06 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_06.cpp)
 add_executable(Ex4_07 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_07/Ex4_07.cpp)
 
 # Chapter 5: Working with Sets
-# add_executable(Ex5_01 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_01/Ex5_01.cpp)
-# add_executable(Ex5_02 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_02/Ex5_02.cpp)
-# add_executable(Ex5_03 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_03/Ex5_03.cpp)
+add_executable(Ex5_01 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_01/Ex5_01.cpp)
+add_executable(Ex5_02 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_02/Ex5_02.cpp)
+add_executable(Ex5_03 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_03/Ex5_03.cpp)
 add_executable(Ex5_04 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_04.cpp)
-# add_executable(Ex5_05 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_05/Ex5_05.cpp)
-# add_executable(Ex5_06 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_06/Ex5_06.cpp)
-# add_executable(Ex5_07 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_07/Ex5_07.cpp)
+add_executable(Ex5_05 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_05/Ex5_05.cpp)
+add_executable(Ex5_06 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_06/Ex5_06.cpp)
+add_executable(Ex5_07 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_07/Ex5_07.cpp)
 
 # Chapter 6: Sorting, Merging, Searching, and Partitioning
 # add_executable(Ex6_01 ${CMAKE_SOURCE_DIR}/Chapter06/Ex6_01/Ex6_01.cpp)

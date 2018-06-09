@@ -8,7 +8,7 @@
 
 class Hash_Name {
 public:
-  size_t operator()(const Name& name)
+  size_t operator()(const Name& name) const
   {
     return name.hash();
   }
