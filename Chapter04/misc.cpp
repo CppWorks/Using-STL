@@ -688,7 +688,7 @@ int main() {
                                                       std::end(folks), 500};
 
     // The elements will be pair<Name, size_t> objects:
-    // Specify hash function (in Name.h).
+    // Specify hash function (Name.h).
     std::unordered_map<Name, size_t, Hash_Name> people2{
         // The innermost braces enclose the arguments
         // to the Name constructor. The next level
@@ -711,7 +711,7 @@ int main() {
 
     std::cout << std::string(50, '-') << std::endl;
     for(auto& item : people3) {
-      std::cout << item.first.firstName << " " << item.first.secondName << " " << item.second << std::endl;
+      std::cout << item.first.getFirstName() << " " << item.first.getSecondName() << " " << item.second << std::endl;
     }
   }
   return 0;

@@ -9,7 +9,7 @@
 #include <string>  // For string class
 
 class Name {
-public:
+private:
   std::string firstName{};
   std::string secondName{};
 
@@ -20,6 +20,14 @@ public:
   {
   }
   Name() = default;
+
+  std::string getFirstName() const {
+    return firstName;
+  }
+
+  std::string getSecondName() const {
+    return secondName;
+  }
 
   // Less-than operator
   bool operator<(const Name& name) const
