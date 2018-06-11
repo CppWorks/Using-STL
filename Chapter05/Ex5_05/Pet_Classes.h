@@ -58,7 +58,7 @@ public:
 
 inline std::ostream& operator<<(std::ostream& out, const Pet& pet)
 {
-  return out << "A " << string{ typeid(pet).name() }.erase(0, 6) << " called "
+  return out << "A " << string{ typeid(pet).name() }.erase(0, 1) << " called "
              << pet.name;
 }
 #endif

@@ -15,14 +15,19 @@
 
 using std::string;
 using Distribution = std::uniform_int_distribution<size_t>;
-using Subject = string;                // A course subject
-using Subjects = std::vector<Subject>; // A vector of subjects
-using Group
-  = std::set<std::weak_ptr<Student>,
-             std::owner_less<std::weak_ptr<Student>>>;  // A student group for a subject
-using Students = std::vector<std::shared_ptr<Student>>; // All the students
-using Course = std::pair<Subject, Group>;               // A pair representing a course
-using Courses = std::map<Subject, Group>;               // The container for courses
+
+// A course subject
+using Subject = string;
+// A vector of subjects
+using Subjects = std::vector<Subject>;
+// A student group for a subject
+using Group = std::set<std::weak_ptr<Student>, std::owner_less<std::weak_ptr<Student>>>;
+// All the students
+using Students = std::vector<std::shared_ptr<Student>>;
+// A pair representing a course
+using Course = std::pair<Subject, Group>;
+// The container for courses
+using Courses = std::map<Subject, Group>;
 
 static std::default_random_engine gen_value;
 

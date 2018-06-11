@@ -18,17 +18,20 @@ public:
     , second(name2)
   {
   }
+  // Move constructor
   Student(Student&& student)
     : first(std::move(student.first))
     , second(std::move(student.second))
   {
-  } // Move constructor
+  }
+  // Copy constructor
   Student(const Student& student)
     : first(student.first)
     , second(student.second)
   {
-  }            // Copy constructor
-  Student() {} // Default constructor
+  }
+  // Default constructor
+  Student() {}
 
   // Less-than operator
   bool operator<(const Student& student) const

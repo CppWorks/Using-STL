@@ -43,6 +43,7 @@ add_executable(Ex4_06 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_06.cpp)
 add_executable(Ex4_07 ${CMAKE_SOURCE_DIR}/Chapter04/Ex4_07/Ex4_07.cpp)
 
 # Chapter 5: Working with Sets
+add_executable(Misc5 ${CMAKE_SOURCE_DIR}/Chapter05/misc.cpp)
 add_executable(Ex5_01 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_01/Ex5_01.cpp)
 add_executable(Ex5_02 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_02/Ex5_02.cpp)
 add_executable(Ex5_03 ${CMAKE_SOURCE_DIR}/Chapter05/Ex5_03/Ex5_03.cpp)

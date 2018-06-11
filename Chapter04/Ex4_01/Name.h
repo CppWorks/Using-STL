@@ -21,11 +21,11 @@ public:
   }
   Name() = default;
 
-  std::string getFirstName() const {
+  const std::string& getFirstName() const {
     return firstName;
   }
 
-  std::string getSecondName() const {
+  const std::string& getSecondName() const {
     return secondName;
   }
 

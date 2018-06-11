@@ -74,9 +74,9 @@ int main()
 
   // Every student must attend a minimum number of Subjects...
   // ...but students being students we must check...
-  for (const auto& student :
-       students) { // Verify the minimum number of Subjects has been met
 
+  // Verify the minimum number of Subjects has been met
+  for (const auto& student : students) {
     // Count how many Subjects the student is on
     size_t course_count = std::count_if(
       std::begin(courses), std::end(courses),

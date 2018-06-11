@@ -58,7 +58,7 @@ Pets get_pets(const Name& person)
   return pets;
 }
 
-// REad all the pets for a given person
+// Read all the pets for a given person
 void list_pets(const std::pair<Name, Pets>& pr)
 {
   std::cout << "\n" << pr.first << ":\n";

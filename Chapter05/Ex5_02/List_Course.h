@@ -13,11 +13,12 @@
 #include <set>    // For set container
 #include <string> // For string class
 
-using Subject = std::string; // A course subject
-using Group
-  = std::set<std::weak_ptr<Student>,
-             std::owner_less<std::weak_ptr<Student>>>; // A student group for a subject
-using Course = std::pair<Subject, Group>;              // A pair representing a course
+// A course subject
+using Subject = std::string;
+// A student group for a subject
+using Group = std::set<std::weak_ptr<Student>, std::owner_less<std::weak_ptr<Student>>>;
+// A pair representing a course
+using Course = std::pair<Subject, Group>;
 
 class List_Course {
 public:
