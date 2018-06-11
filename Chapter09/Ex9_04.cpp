@@ -24,7 +24,7 @@ int main()
   std::vector<string> words;
   string word;
   while (true) {
-    std::cout << "\nEnter a word, or Ctrl+z to end: ";
+    std::cout << "\nEnter a word, or Ctrl+D to end: ";
     if ((std::cin >> word).eof())
       break;
     string word_copy{ word };

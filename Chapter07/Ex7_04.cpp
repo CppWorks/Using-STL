@@ -13,7 +13,7 @@ int main()
 {
   while (true) {
     string sentence;
-    std::cout << "Enter a sentence or Ctrl+Z to end: ";
+    std::cout << "Enter a sentence or Ctrl+D to end: ";
     std::getline(std::cin, sentence);
     if (std::cin.eof())
       break;

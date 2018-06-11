@@ -60,7 +60,7 @@ int main()
   std::vector<double> values(sample_count);
   std::vector<double> log_values;
   while (true) {
-    std::cout << "\nEnter values for the mean and standard deviation, or Ctrl+Z to end: ";
+    std::cout << "\nEnter values for the mean and standard deviation, or Ctrl+D to end: ";
     if ((std::cin >> mu).eof())
       break;
     std::cin >> sigma;

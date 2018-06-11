@@ -12,7 +12,7 @@
 int main()
 {
   std::vector<Name> names;
-  std::cout << "Enter names as first name followed by second name. Enter Ctrl+Z to end:";
+  std::cout << "Enter names as first name followed by second name. Enter Ctrl+D to end:";
   std::copy(std::istream_iterator<Name>(std::cin), std::istream_iterator<Name>(),
             std::back_insert_iterator<std::vector<Name>>(names));
 

@@ -31,7 +31,7 @@ int main()
   string word;
   auto end_iter = std::istream_iterator<string>{}; // End-of-stream iterator
   while (true) {
-    std::cout << "\nEnter a word, or Ctrl+z to end: ";
+    std::cout << "\nEnter a word, or Ctrl+D to end: ";
     if ((std::cin >> word).eof())
       break;
 

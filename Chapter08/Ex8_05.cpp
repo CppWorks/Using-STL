@@ -57,7 +57,7 @@ int main()
   const size_t sample_count{ 20000 };
   std::vector<double> values(sample_count);
   while (true) {
-    std::cout << "\nEnter values for the mean and standard deviation, or Ctrl+Z to end: ";
+    std::cout << "\nEnter values for the mean and standard deviation, or Ctrl+D to end: ";
     if ((std::cin >> mu).eof())
       break;
     std::cin >> sigma;

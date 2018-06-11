@@ -27,7 +27,7 @@ int main()
       Die{ 2, 2, 2, 2, 6, 6 } };
 
   std::cout << "For each game, select a die from the following by entering 1, 2, 3, or 4 "
-               "(or Ctrl+Z to end):\n"
+               "(or Ctrl+D to end):\n"
             << "die 1: 3 3 3 3 3 3\n"
             << "die 2: 0 0 4 4 4 4\n"
             << "die 3: 1 1 1 5 5 5\n"

@@ -37,7 +37,7 @@ int main()
 
   std::cout << "Enter each transaction as:\n   5 digit account number   amount   "
                "credit(true or false).\n"
-            << "Enter Ctrl+Z to end.\n";
+            << "Enter Ctrl+D to end.\n";
 
   // Read 1st set of transactions
   std::copy(std::istream_iterator<Transaction>{ std::cin },
