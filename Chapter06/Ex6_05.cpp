@@ -22,12 +22,17 @@ int main()
   std::partition(std::begin(values),
                  std::end(values), // Partition the values with (value < wanted)
                  [wanted](double value) { return value < wanted; });
+  std::cout << "The elements after first partitioning are:\n";
+  std::copy(std::begin(values), std::end(values),
+            std::ostream_iterator<int>{ std::cout, " " });
+  std::cout << std::endl;
+
   std::partition(std::begin(values),
                  std::end(values), // Partition the values with !(wanted < value)
                  [wanted](double value) { return !(wanted < value); });
 
   // Output the elements after partitioning
-  std::cout << "The elements after partitioning are:\n";
+  std::cout << "The elements after second partitioning are:\n";
   std::copy(std::begin(values), std::end(values),
             std::ostream_iterator<int>{ std::cout, " " });
   std::cout << std::endl;

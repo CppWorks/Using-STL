@@ -17,9 +17,14 @@ int main()
             std::back_insert_iterator<std::vector<Name>>(names));
 
   std::cout << names.size() << " names read. Sorting in ascending sequence...\n";
-  std::sort(std::begin(names), std::end(names), [](const Name& name1, const Name& name2) {
-    return name1.get_second() < name2.get_second();
-  });
+  std::stable_sort(std::begin(names), std::end(names),
+                   [](const Name& name1, const Name& name2) {
+                     return name1.get_second() < name2.get_second();
+                   });
+  // std::sort(std::begin(names), std::end(names), [](const Name& name1, const Name&
+  // name2) {
+  //   return name1.get_second() < name2.get_second();
+  // });
 
   std::cout << "\nThe names in ascending sequence are:\n";
   std::copy(std::begin(names), std::end(names),

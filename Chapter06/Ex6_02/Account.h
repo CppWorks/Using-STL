@@ -71,4 +71,5 @@ std::ostream& operator<<(std::ostream& out, const Account& acc)
              << std::setfill(' ') << std::setw(8) << std::fixed << std::setprecision(2)
              << acc.balance;
 }
+
 #endif

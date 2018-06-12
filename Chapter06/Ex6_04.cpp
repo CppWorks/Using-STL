@@ -15,6 +15,15 @@ int main()
 
   auto average = std::accumulate(std::begin(temperatures), std::end(temperatures), 0.0)
     / temperatures.size();
+  std::cout << "Average temperature: " << average << std::endl;
+
+  // Note that the code in main() uses back_insert_iterator objects that are created using
+  // the back_inserter() helper function as the iterators for both destination containers
+  // in the partition_copy() call. A back_insert_iterator calls push_back() to add a new
+  // element to a container so using this approach avoids the necessity to know in advance
+  // how many elements are to be stored. If you use a begin iterator for a destination
+  // range, sufficient elements must already exist in the destination prior to the
+  // operation to accommodate however many will be copied.
   std::partition_copy(std::begin(temperatures), std::end(temperatures),
                       std::back_inserter(low_t), std::back_inserter(high_t),
                       [average](double t) { return t < average; });
