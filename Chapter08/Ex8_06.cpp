@@ -17,7 +17,7 @@ using Params = std::lognormal_distribution<>::param_type;
 
 // Template to plot a distribution from a range of sample values
 template <typename Iter>
-void dist_plot(Iter& beg_iter, Iter& end_iter, size_t width = 90)
+void dist_plot(Iter beg_iter, Iter end_iter, size_t width = 90)
 {
   // Create data for distribution plot
   std::map<int, size_t> plot_data; // Elements are pair<value, frequency>

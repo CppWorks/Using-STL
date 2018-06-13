@@ -9,7 +9,7 @@
 using std::string;
 
 // Generates and list integers from a seed_seq object
-void gen_and_list(const std::seed_seq& ss,
+void gen_and_list(std::seed_seq& ss,
                   const string title = "Values:", size_t count = 8)
 {
   std::vector<unsigned int> values(count);

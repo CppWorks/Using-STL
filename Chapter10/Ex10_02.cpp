@@ -6,6 +6,7 @@
 #include <iostream>            // For standard streams
 #include <numeric>             // For iota()
 #include <valarray>            // For valarray
+#include <iterator>
 
 const static double g{ 32.0 }; // Acceleration due to gravity ft/sec/sec
 
@@ -24,10 +25,10 @@ int main()
   *(std::end(times) - 1) = end_time;                // Set the last time value
 
   // Calculate distances each second
-  auto distances = times.apply([](double t) { return 0.5 * g * t * t; });
+  std::valarray<double> distances = times.apply([](double t) { return 0.5 * g * t * t; });
 
   // Calculate speed each second
-  auto v_fps = sqrt(distances.apply([](double d) { return 2 * g * d; }));
+  std::valarray<double> v_fps = sqrt(distances.apply([](double d) { return 2 * g * d; }));
 
   // Lambda expression to output results
   auto print
@@ -46,7 +47,7 @@ int main()
   std::for_each(std::begin(v_fps), std::end(v_fps), print);
 
   // Get velocities in mph and output them
-  auto v_mph = v_fps.apply([](double v) { return v * 60 / 88; });
+  std::valarray<double> v_mph = v_fps.apply([](double v) { return v * 60 / 88; });
   std::cout << "\nVelocity(mph):  ";
   std::for_each(std::begin(v_mph), std::end(v_mph), print);
   std::cout << std::endl;

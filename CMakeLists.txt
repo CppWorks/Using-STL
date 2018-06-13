@@ -70,11 +70,11 @@ add_executable(Ex7_05 ${CMAKE_SOURCE_DIR}/Chapter07/Ex7_05.cpp)
 
 # Chapter 8: Generating Random Numbers
 add_executable(Ex8_01 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_01.cpp)
-# add_executable(Ex8_02 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_02.cpp)
+add_executable(Ex8_02 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_02.cpp)
 add_executable(Ex8_03 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_03.cpp)
 add_executable(Ex8_04 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_04.cpp)
-# add_executable(Ex8_05 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_05.cpp)
-# add_executable(Ex8_06 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_06.cpp)
+add_executable(Ex8_05 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_05.cpp)
+add_executable(Ex8_06 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_06.cpp)
 add_executable(Ex8_07 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_07/Ex8_07.cpp)
 add_executable(Ex8_08 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_08.cpp)
 add_executable(Ex8_09 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_09.cpp)
@@ -93,7 +93,7 @@ add_executable(Ex9_10 ${CMAKE_SOURCE_DIR}/Chapter09/Ex9_10.cpp)
 
 # Chapter 10: Working with Numerical, Time, and Complex Data
 add_executable(Ex10_01 ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_01.cpp)
-# add_executable(Ex10_02 ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_02.cpp)
+add_executable(Ex10_02 ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_02.cpp)
 add_executable(Ex10_03 ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_03/Ex10_03.cpp ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_03/gaussian.cpp)
 add_executable(Ex10_04 ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_04.cpp)
 add_executable(Ex10_05 ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_05/Ex10_05.cpp ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_05/gaussian.cpp)
