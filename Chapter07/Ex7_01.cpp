@@ -15,6 +15,7 @@ int main()
                               "six", "seven", "eight", "nine" };
   std::vector<string> words2{ "two",   "three", "four", "five", "six",
                               "seven", "eight", "nine", "ten" };
+
   auto iter1 = std::begin(words1);
   auto end_iter1 = std::end(words1);
   auto iter2 = std::begin(words2);

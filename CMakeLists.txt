@@ -61,6 +61,7 @@ add_executable(Ex6_04 ${CMAKE_SOURCE_DIR}/Chapter06/Ex6_04.cpp)
 add_executable(Ex6_05 ${CMAKE_SOURCE_DIR}/Chapter06/Ex6_05.cpp)
 
 # Chapter 7: More Algorithms
+add_executable(Misc7 ${CMAKE_SOURCE_DIR}/Chapter07/misc.cpp)
 add_executable(Ex7_01 ${CMAKE_SOURCE_DIR}/Chapter07/Ex7_01.cpp)
 add_executable(Ex7_02 ${CMAKE_SOURCE_DIR}/Chapter07/Ex7_02.cpp)
 add_executable(Ex7_03 ${CMAKE_SOURCE_DIR}/Chapter07/Ex7_03.cpp)
