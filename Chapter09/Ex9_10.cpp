@@ -14,7 +14,7 @@ using std::string;
 
 int main()
 {
-  string file_in{ "G:/Beginning_STL/dictionary.txt" };
+  string file_in{ "dictionary.txt" };
   std::ifstream in{ file_in };
   if (!in) {
     std::cerr << file_in << " not open." << std::endl;

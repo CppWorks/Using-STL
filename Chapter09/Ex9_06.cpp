@@ -12,7 +12,7 @@ using std::string;
 
 int main()
 {
-  string file_in{ "G:/Beginning_STL/dictionary.txt" };
+  string file_in{ "dictionary.txt" };
   std::ifstream in{ file_in };
   if (!in) {
     std::cerr << file_in << " not open." << std::endl;
@@ -25,7 +25,7 @@ int main()
               << std::count_if(std::istream_iterator<string>{ in },
                                std::istream_iterator<string>{},
                                [&ch](const string& s) { return s[0] == ch; })
-              << (((ch - 'a' + 1) % perline) ? " " : "\n");
+              << (((ch - 'a' + 1) % perline) ? " | " : "\n");
     in.clear();  // Clear EOF...
     in.seekg(0); // ... and back to the beginning
   }

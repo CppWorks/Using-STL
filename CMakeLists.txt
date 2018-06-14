@@ -80,6 +80,7 @@ add_executable(Ex8_08 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_08.cpp)
 add_executable(Ex8_09 ${CMAKE_SOURCE_DIR}/Chapter08/Ex8_09.cpp)
 
 # Chapter 9: Stream Operations
+add_executable(Misc9 ${CMAKE_SOURCE_DIR}/Chapter09/misc.cpp)
 add_executable(Ex9_01 ${CMAKE_SOURCE_DIR}/Chapter09/Ex9_01.cpp)
 add_executable(Ex9_02 ${CMAKE_SOURCE_DIR}/Chapter09/Ex9_02.cpp)
 add_executable(Ex9_03 ${CMAKE_SOURCE_DIR}/Chapter09/Ex9_03.cpp)
@@ -90,6 +91,9 @@ add_executable(Ex9_07 ${CMAKE_SOURCE_DIR}/Chapter09/Ex9_07.cpp)
 add_executable(Ex9_08 ${CMAKE_SOURCE_DIR}/Chapter09/Ex9_08.cpp)
 add_executable(Ex9_09 ${CMAKE_SOURCE_DIR}/Chapter09/Ex9_09.cpp)
 add_executable(Ex9_10 ${CMAKE_SOURCE_DIR}/Chapter09/Ex9_10.cpp)
+add_custom_command(
+  TARGET Ex9_03 PRE_BUILD
+  COMMAND cp "${CMAKE_SOURCE_DIR}/Chapter09/Data Files/dictionary.txt" ${CMAKE_CURRENT_BINARY_DIR})
 
 # Chapter 10: Working with Numerical, Time, and Complex Data
 add_executable(Ex10_01 ${CMAKE_SOURCE_DIR}/Chapter10/Ex10_01.cpp)
@@ -107,4 +111,13 @@ add_custom_command(
   TARGET compile_commands POST_BUILD
   COMMAND touch ${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json
   COMMAND cp ${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json ${CMAKE_SOURCE_DIR}
+  )
+
+set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES
+  "${CMAKE_CURRENT_BINARY_DIR}/dictionary.txt"
+  "${CMAKE_CURRENT_BINARY_DIR}/dictionary_copy.txt"
+  "${CMAKE_CURRENT_BINARY_DIR}/fibonacci.txt"
+  "${CMAKE_CURRENT_BINARY_DIR}/temperatures.txt"
+  "${CMAKE_CURRENT_BINARY_DIR}/junk.txt"
+  "${CMAKE_CURRENT_BINARY_DIR}/words.txt"
   )

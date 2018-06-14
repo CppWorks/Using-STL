@@ -10,13 +10,13 @@ using std::string;
 
 int main()
 {
-  string file_name{ "G:/Beginning_STL/dictionary.txt" };
+  string file_name{ "dictionary.txt" };
   std::ifstream file_in{ file_name };
   if (!file_in) {
     std::cerr << file_name << " not open." << std::endl;
     exit(1);
   }
-  string file_copy{ "G:/Beginning_STL/dictionary_copy.txt" };
+  string file_copy{ "dictionary_copy.txt" };
   std::ofstream file_out{ file_copy, std::ios_base::out | std::ios_base::trunc };
 
   std::istreambuf_iterator<char> in{ file_in };   // Input stream buffer iterator
@@ -26,6 +26,10 @@ int main()
     out = *in++; // Copy character from in to out
 
   std::cout << "File copy completed." << std::endl;
+
+  // std::copy() would be much easier:
+  // std::copy(std::istreambuf_iterator<char> {file_in}, std::istreambuf_iterator<char> {},
+  //           std::ostreambuf_iterator<char>{file_out});
 
   file_in.close(); // Close the file
   file_out.close();

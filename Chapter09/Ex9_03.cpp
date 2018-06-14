@@ -14,7 +14,7 @@ using std::string;
 int main()
 {
   // Read words from the file into a set container
-  string file_in{ "G:/Beginning_STL/dictionary.txt" };
+  string file_in{ "dictionary.txt" };
   std::ifstream in{ file_in };
   if (!in) {
     std::cerr << file_in << " not open." << std::endl;
@@ -24,10 +24,12 @@ int main()
                                std::istream_iterator<string>() };
   std::cout << dictionary.size() << " words in dictionary." << std::endl;
 
+  // -----------------------------------------------------------------------
+
   std::vector<string> words;
   string word;
   while (true) {
-    std::cout << "\nEnter a word, or Ctrl+D to end: ";
+    std::cout << "\nEnter a word, or Ctrl+D to end:\n";
     if ((std::cin >> word).eof())
       break;
     string word_copy{ word };

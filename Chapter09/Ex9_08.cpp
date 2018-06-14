@@ -13,7 +13,7 @@ using std::string;
 
 int main()
 {
-  string file_name{ "G:/Beginning_STL/temperatures.txt" };
+  string file_name{ "temperatures.txt" };
   std::ofstream temps_out{ file_name, std::ios_base::out | std::ios_base::trunc };
   const size_t n{ 50 }; // Number of temperatures required
 
@@ -22,7 +22,10 @@ int main()
   double mu{ 50.0 }, sigma{ 15.0 };               // Mean: 50 degrees SD: 15
   std::normal_distribution<> normal{ mu, sigma }; // Create distribution
 
-  // Write random temperatures to the file
+  // Although you can use stream iterators with generate_n(), you can't use them with the
+  // generate() algorithm because it requires forward iterators.
+
+  // Write random temperatures to the file:
   std::generate_n(std::ostream_iterator<double>{ temps_out, " " }, n,
                   [&rng, &normal] { return normal(rng); });
   temps_out.close(); // Close the output file
@@ -36,6 +39,5 @@ int main()
              std::cout << std::fixed << std::setprecision(2) << std::setw(5) << t
                        << ((++count % perline) ? " " : "\n");
            });
-  std::cout << std::endl;
   temps_in.close(); // Close the input file
 }

@@ -20,7 +20,7 @@ int main()
   std::cout << "Total is " << sum << std::endl;
 
   std::cin.clear();  // Clear EOF state
-  std::cin.ignore(); // Skip characters
+  // std::cin.ignore(); // Skip characters
 
   // Read integers using the copy of the iterator
   std::cout << "Enter some more integers - enter Ctrl+D to end.\n";
